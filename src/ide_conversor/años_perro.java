@@ -4,9 +4,7 @@
  */
 package ide_conversor;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
+
 
 /**
  *
@@ -296,8 +294,10 @@ public class años_perro extends javax.swing.JFrame {
 
     private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
         // TODO add your handling code here:
-        años = años + "0";
-            TecladoPantalla.setText(años);  
+        if (años != ""){
+            años = años + "0";
+            TecladoPantalla.setText(años);
+        }      
     }//GEN-LAST:event_boton0ActionPerformed
 
     private void botonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenosActionPerformed
@@ -308,7 +308,11 @@ public class años_perro extends javax.swing.JFrame {
 
     private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
         // TODO add your handling code here:
-        float edad = 7.0f / 7.0f;
+        if (años != ""){
+            float edad = Float.parseFloat(años);
+            ResultadoPantalla.setText("tus años perro son x");
+        }
+        
     }//GEN-LAST:event_BotonInicioActionPerformed
 
     /**
