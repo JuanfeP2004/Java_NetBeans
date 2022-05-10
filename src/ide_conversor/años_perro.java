@@ -14,6 +14,7 @@ import javax.swing.JButton;
  */
 public class años_perro extends javax.swing.JFrame {
 
+    String años = "";
     /**
      * Creates new form años_perro
      */
@@ -54,8 +55,8 @@ public class años_perro extends javax.swing.JFrame {
         setTitle("Años humano-perro");
         setBackground(new java.awt.Color(204, 204, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMaximumSize(new java.awt.Dimension(1200, 800));
-        setMinimumSize(new java.awt.Dimension(600, 450));
+        setMaximumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(600, 400));
         setName("VentanaP"); // NOI18N
         setPreferredSize(new java.awt.Dimension(600, 400));
         setSize(new java.awt.Dimension(600, 400));
@@ -85,46 +86,101 @@ public class años_perro extends javax.swing.JFrame {
 
         boton2.setBackground(new java.awt.Color(255, 51, 51));
         boton2.setLabel("2");
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton2);
 
         boton3.setBackground(new java.awt.Color(255, 255, 51));
         boton3.setLabel("3");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton3);
 
         boton4.setBackground(new java.awt.Color(102, 153, 0));
         boton4.setLabel("4");
+        boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton4ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton4);
 
         boton5.setBackground(new java.awt.Color(255, 153, 51));
         boton5.setLabel("5");
+        boton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton5ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton5);
 
         boton6.setBackground(new java.awt.Color(51, 0, 204));
         boton6.setLabel("6");
+        boton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton6ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton6);
 
         boton7.setBackground(new java.awt.Color(255, 153, 153));
         boton7.setLabel("7");
+        boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton7ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton7);
 
         boton8.setBackground(new java.awt.Color(153, 0, 0));
         boton8.setLabel("8");
+        boton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton8ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton8);
 
         boton9.setBackground(new java.awt.Color(204, 204, 255));
         boton9.setLabel("9");
+        boton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton9ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton9);
 
         boton0.setBackground(new java.awt.Color(204, 255, 204));
         boton0.setLabel("0");
+        boton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton0ActionPerformed(evt);
+            }
+        });
         Teclado.add(boton0);
 
         botonMenos.setBackground(new java.awt.Color(0, 204, 204));
         botonMenos.setLabel("borrar");
+        botonMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMenosActionPerformed(evt);
+            }
+        });
         Teclado.add(botonMenos);
 
         BotonInicio.setBackground(new java.awt.Color(255, 51, 102));
         BotonInicio.setLabel("iniciar");
+        BotonInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonInicioActionPerformed(evt);
+            }
+        });
         Teclado.add(BotonInicio);
 
         TecladoPantalla.setEditable(false);
@@ -185,8 +241,75 @@ public class años_perro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-            // TODO add your handling code here:
+            // TODO add your handling code here: 
+            años = años + "1";
+            TecladoPantalla.setText(años);  
     }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        // TODO add your handling code here:
+            años = años + "2";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        // TODO add your handling code here:
+            años = años + "3";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+        // TODO add your handling code here:
+            años = años + "4";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton4ActionPerformed
+
+    private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
+        // TODO add your handling code here:
+        años = años + "5";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton5ActionPerformed
+
+    private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
+        // TODO add your handling code here:
+        años = años + "6";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton6ActionPerformed
+
+    private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
+        // TODO add your handling code here:
+        años = años + "7";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton7ActionPerformed
+
+    private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
+        // TODO add your handling code here:
+        años = años + "8";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton8ActionPerformed
+
+    private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
+        // TODO add your handling code here:
+        años = años + "9";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton9ActionPerformed
+
+    private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
+        // TODO add your handling code here:
+        años = años + "0";
+            TecladoPantalla.setText(años);  
+    }//GEN-LAST:event_boton0ActionPerformed
+
+    private void botonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenosActionPerformed
+        // TODO add your handling code here:
+        años = "";
+        TecladoPantalla.setText("");
+    }//GEN-LAST:event_botonMenosActionPerformed
+
+    private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
+        // TODO add your handling code here:
+        float edad = 7.0f / 7.0f;
+    }//GEN-LAST:event_BotonInicioActionPerformed
 
     /**
      * @param args the command line arguments
