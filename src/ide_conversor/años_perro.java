@@ -4,6 +4,8 @@
  */
 package ide_conversor;
 
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -53,11 +55,11 @@ public class años_perro extends javax.swing.JFrame {
         setTitle("Años humano-perro");
         setBackground(new java.awt.Color(204, 204, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMaximumSize(new java.awt.Dimension(600, 400));
-        setMinimumSize(new java.awt.Dimension(600, 400));
+        setMaximumSize(new java.awt.Dimension(613, 400));
+        setMinimumSize(new java.awt.Dimension(613, 400));
         setName("VentanaP"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(600, 400));
-        setSize(new java.awt.Dimension(600, 400));
+        setPreferredSize(new java.awt.Dimension(613, 400));
+        setSize(new java.awt.Dimension(613, 400));
 
         Titulo.setBackground(new java.awt.Color(255, 255, 204));
         Titulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -68,6 +70,8 @@ public class años_perro extends javax.swing.JFrame {
         Titulo.setName("Titulo"); // NOI18N
         getContentPane().add(Titulo, java.awt.BorderLayout.PAGE_START);
 
+        Cuerpo.setMaximumSize(new java.awt.Dimension(613, 400));
+        Cuerpo.setMinimumSize(new java.awt.Dimension(613, 400));
         Cuerpo.setPreferredSize(new java.awt.Dimension(700, 400));
 
         Teclado.setBackground(new java.awt.Color(0, 0, 0));
@@ -183,7 +187,7 @@ public class años_perro extends javax.swing.JFrame {
 
         TecladoPantalla.setEditable(false);
         TecladoPantalla.setBackground(new java.awt.Color(102, 204, 255));
-        TecladoPantalla.setText("Ingrese un numero");
+        TecladoPantalla.setText("Ingrese su edad");
 
         Imagen1.setBackground(new java.awt.Color(102, 102, 255));
         Imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ide_conversor/Imagenes/persona.jpg"))); // NOI18N
@@ -208,11 +212,11 @@ public class años_perro extends javax.swing.JFrame {
                     .addComponent(Teclado, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                     .addComponent(TecladoPantalla)
                     .addComponent(ResultadoPantalla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addGroup(CuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Imagen2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Imagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(75, 75, 75))
+                .addGap(36, 36, 36)
+                .addGroup(CuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Imagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Imagen2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         CuerpoLayout.setVerticalGroup(
             CuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,7 +307,8 @@ public class años_perro extends javax.swing.JFrame {
     private void botonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenosActionPerformed
         // TODO add your handling code here:
         años = "";
-        TecladoPantalla.setText("");
+        TecladoPantalla.setText("Ingrese su edad");
+        ResultadoPantalla.setText("Resultado");
     }//GEN-LAST:event_botonMenosActionPerformed
 
     private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
@@ -311,7 +316,12 @@ public class años_perro extends javax.swing.JFrame {
         if (años != ""){
             float edad = Float.parseFloat(años);
             float conversor = (edad * 15) / 100;
-            ResultadoPantalla.setText("tus años en perro son " + conversor);
+            ResultadoPantalla.setText("Sus años en perro son " + conversor + " años");
+            TecladoPantalla.setText("");
+            años = "";
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Escriba su edad");
         }
         
     }//GEN-LAST:event_BotonInicioActionPerformed
